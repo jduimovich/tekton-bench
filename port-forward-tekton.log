@@ -1,0 +1,13 @@
+pod/tekton-dashboard-85997bc487-5zl7l
+POD is pod/tekton-dashboard-85997bc487-5zl7l in Namespace tekton-pipelines
+Waiting for tekton-dashboard Running, STATUS = Pending
+Port Forwarding to pod/tekton-dashboard-85997bc487-5zl7l / tekton-pipelines Port: 9097
+Forwarding from 127.0.0.1:9097 -> 9097
+Forwarding from [::1]:9097 -> 9097
+Handling connection for 9097
+Handling connection for 9097
+Handling connection for 9097
+Handling connection for 9097
+Handling connection for 9097
+Handling connection for 9097
+Handling connection for 9097

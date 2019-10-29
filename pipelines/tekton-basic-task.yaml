@@ -1,0 +1,76 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: tekton-basic-task
+spec:
+  steps:
+    - name: step-1
+      image: docker.io/ubuntu
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  This is a default Tekton pipeline. Tekton is working." 
+    - name: step-2
+      image: docker.io/ubuntu
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-2" 
+    - name: step-3
+      image: docker.io/ubuntu
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-3" 
+    - name: step-4
+      image: docker.io/ubuntu
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-4" 
+    - name: step-5
+      image: docker.io/ubuntu
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-5" 
+    - name: step-6
+      image: docker.io/ubuntu
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-6" 
+    - name: step-7
+      image: docker.io/ubuntu
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-7" 
+    - name: step-8
+      image: docker.io/ubuntu
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-8" 
+    - name: step-9
+      image: docker.io/ubuntu
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-9" 
+    - name: echo-step-10-final
+      image: docker.io/ubuntu
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  Final Step in pipeline. Tekton is working." 
