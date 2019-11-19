@@ -15,3 +15,19 @@ spec:
     runAfter: [task-2]
     taskRef:
       name: tekton-singlestep
+  - name: task-4
+    runAfter: [task-3]
+    taskRef:
+      name: tekton-singlestep
+  - name: task-5
+    runAfter: [task-4]
+    taskRef:
+      name: tekton-singlestep
+  - name: task-6
+    runAfter: [task-4]
+    taskRef:
+      name: tekton-singlestep
+  - name: task-7
+    runAfter: [task-4]
+    taskRef:
+      name: tekton-singlestep
