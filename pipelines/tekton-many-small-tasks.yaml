@@ -1,0 +1,17 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  name: tekton-many-small-tasks
+spec:
+  tasks:
+  - name: task-1
+    taskRef:
+      name: tekton-singlestep
+  - name: task-2
+    runAfter: [task-1]
+    taskRef:
+      name: tekton-singlestep
+  - name: task-3
+    runAfter: [task-2]
+    taskRef:
+      name: tekton-singlestep

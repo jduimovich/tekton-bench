@@ -1,6 +1,11 @@
+if [ -z $TEKTON_DEMO_NS ]
+then
 export TEKTON_DEMO_NS=tekton-pipelines
+fi
+if [ -z $TEKTON_DEMO_SA ]
+then 
 export TEKTON_DEMO_SA=tekton-dashboard
-
+fi
 
 RELEASES=https://storage.googleapis.com/tekton-releases
 TEKTON=$RELEASES/latest/release.yaml
