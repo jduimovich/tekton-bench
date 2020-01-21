@@ -2,4 +2,4 @@
 #!/bin/bash
 script="$0"
 script_dir="$(dirname $script)"
-sh $script_dir/run-basic-pipeline UNUSED_REPO_SLOT tekton-many-small-tasks
+sh $script_dir/run-basic-pipeline reponame tekton-many-small-tasks
