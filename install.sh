@@ -35,4 +35,5 @@ fi
 
 kubectl apply -f pipelines -n $TEKTON_DEMO_NS
 
-echo "Tekton Hack Installed "
+echo "Tekton Easy Demo Installed "
+echo "sh all  - runs all the example pipelines"
