@@ -9,6 +9,11 @@ Run pipelines
 ```sh run-basic```
 
 
+For different size pipelines/many steps vs single steps
+
+```sh all```
+
+
 Open localhost:9097 for a dashboard view
 
 ```http://localhost:9097/```
