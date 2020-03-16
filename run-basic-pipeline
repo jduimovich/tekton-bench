@@ -5,6 +5,15 @@ script_dir="$(dirname $script)"
 script_name="$(basename $script)"
 TAG=$(date +"%y%m%d%H%M%S")
 
+if [ -z $TEKTON_DEMO_NS ]
+then
+export TEKTON_DEMO_NS=tekton-pipelines
+fi
+if [ -z $TEKTON_DEMO_SA ]
+then 
+export TEKTON_DEMO_SA=tekton-dashboard
+fi
+
 GIT_URL=$1 
 GIT_REPO_BASE=$(basename $GIT_URL .git )
 DOCKER_IMAGE=$MY_DOCKER_USER/$GIT_REPO_BASE:$TAG
