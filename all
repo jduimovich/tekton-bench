@@ -5,9 +5,12 @@ else
     bash ./install.sh 
 fi 
 
+echo "bench" >log
 for bench in bench/bench*
 do 
     echo $bench
-    bash $bench
+    bash $bench >> log & 
 done 
- 
+wait
+cat log
+rm -rf log
