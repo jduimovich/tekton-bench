@@ -1,0 +1,5 @@
+#!/bin/bash
+script="$0"
+script_dir="$(dirname $script)"
+bench_name="$(basename $script)"
+bash $script_dir/util/run-pipeline $bench_name

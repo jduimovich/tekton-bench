@@ -1,19 +1,12 @@
 A very simple Tekton Pipelines Demo
 
-Run the shell script to install (tested on Docker and MacOS/OpenShift 4.x)
-
-``` sh install.sh ```
-
+Tekton must be installed already from the operator. 
+ 
 Run pipelines
 
-```sh run-basic```
-
-
+```bash bench-three-tasks-with-ten-steps```
+ 
 For different size pipelines/many steps vs single steps
 
-```sh all```
-
-
-Open localhost:9097 for a dashboard view
-
-```http://localhost:9097/```
+```bash all```
+ 

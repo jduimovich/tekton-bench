@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: bench-three-tasks-with-ten-steps-parallel
+spec:
+  tasks:
+  - name: task-1
+    taskRef:
+      name: bench-task-with-ten-steps
+  - name: task-2 
+    taskRef:
+      name: bench-task-with-ten-steps
+  - name: task-3 
+    taskRef:
+      name: bench-task-with-ten-steps

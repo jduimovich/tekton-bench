@@ -1,5 +1,0 @@
-
-#!/bin/bash
-script="$0"
-script_dir="$(dirname $script)"
-sh $script_dir/run-basic-pipeline reponame tekton-singletask

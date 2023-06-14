@@ -1,0 +1,9 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: bench-one-task-with-ten-steps
+spec:
+  tasks:
+  - name: task-1
+    taskRef:
+      name: bench-task-with-ten-steps 

@@ -1,0 +1,26 @@
+
+#!/bin/bash 
+ 
+P_REF=$1
+TAG=$(date +"%y%m%d%H%M%S") 
+NS=$(oc project --short)
+
+PIPELINE_RUN=$(mktemp) 
+
+echo "Running $P_REF"  
+cat <<EOF > $PIPELINE_RUN
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: $P_REF-$TAG
+spec:  
+  serviceAccountName: appstudio-pipeline
+  pipelineRef:
+    name: $P_REF 
+EOF
+ 
+
+kubectl apply -f $PIPELINE_RUN -n $NS 
+ 
+
+

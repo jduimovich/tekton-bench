@@ -1,9 +1,0 @@
-apiVersion: tekton.dev/v1alpha1
-kind: PipelineRun
-metadata:
-  name: PRUN_NAME
-spec:
-  serviceAccountName: P_SA
-  timeout: "1h0m0s"  
-  pipelineRef:
-    name: P_REF 

@@ -1,0 +1,27 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: bench-seven-tasks-with-one-step-parallel
+spec:
+  tasks:
+  - name: task-1
+    taskRef:
+      name: bench-task-with-one-step
+  - name: task-2 
+    taskRef:
+      name: bench-task-with-one-step
+  - name: task-3 
+    taskRef:
+      name: bench-task-with-one-step
+  - name: task-4 
+    taskRef:
+      name: bench-task-with-one-step
+  - name: task-5 
+    taskRef:
+      name: bench-task-with-one-step
+  - name: task-6 
+    taskRef:
+      name: bench-task-with-one-step
+  - name: task-7 
+    taskRef:
+      name: bench-task-with-one-step

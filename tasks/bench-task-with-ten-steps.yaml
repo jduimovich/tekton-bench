@@ -1,0 +1,76 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: bench-task-with-ten-steps
+spec:
+  steps:
+    - name: step-1
+      image: registry.redhat.io/openshift4/ose-cli:v4.12@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad 
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  This is a default Tekton pipeline. Tekton is working." 
+    - name: step-2
+      image: registry.redhat.io/openshift4/ose-cli:v4.12@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad 
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-2" 
+    - name: step-3
+      image: registry.redhat.io/openshift4/ose-cli:v4.12@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad 
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-3" 
+    - name: step-4
+      image: registry.redhat.io/openshift4/ose-cli:v4.12@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad 
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-4" 
+    - name: step-5
+      image: registry.redhat.io/openshift4/ose-cli:v4.12@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad 
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-5" 
+    - name: step-6
+      image: registry.redhat.io/openshift4/ose-cli:v4.12@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad 
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-6" 
+    - name: step-7
+      image: registry.redhat.io/openshift4/ose-cli:v4.12@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad 
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-7" 
+    - name: step-8
+      image: registry.redhat.io/openshift4/ose-cli:v4.12@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad 
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-8" 
+    - name: step-9
+      image: registry.redhat.io/openshift4/ose-cli:v4.12@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad 
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  step-9" 
+    - name: echo-step-10-final
+      image: registry.redhat.io/openshift4/ose-cli:v4.12@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad 
+      command:
+        - /bin/sh
+      args:
+        - -c 
+        - "echo  Final Step in pipeline. Tekton is working." 

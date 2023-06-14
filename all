@@ -1,6 +1,13 @@
+ 
+if kubectl get task bench-task-with-one-step &>/dev/null; then
+    echo "Pipelines and Tasks loaded"
+else
+    bash ./install.sh 
+fi 
 
-
-sh run-basic
-sh run-manysmall
-sh run-single
-
+for bench in bench/bench*
+do 
+    echo $bench
+    bash $bench
+done 
+ 
