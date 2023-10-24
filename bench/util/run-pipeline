@@ -14,7 +14,6 @@ kind: PipelineRun
 metadata:
   name: $P_REF-$TAG
 spec:  
-  serviceAccountName: appstudio-pipeline
   pipelineRef:
     name: $P_REF 
 EOF
